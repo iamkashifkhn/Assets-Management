@@ -1,9 +1,12 @@
-import './App.css';
+import Layout from './container/Layout/Layout';
+import React from 'react'
+import "./App.css";
 
 function App() {
+
   return (
     <div className="App">
-        <h1> Helllo </h1>
+        <Layout/>
     </div>
   );
 }

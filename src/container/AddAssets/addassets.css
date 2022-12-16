@@ -1,0 +1,30 @@
+.assets__add-heading{
+    display: flex;
+    justify-content: center;
+    background-color: var(--bg-color);
+    align-items: center;
+}
+.assets__add-heading h4{
+    padding: 10px 0;
+    color: #fff;
+}
+.assets__add-content {
+    margin-top: 1.5rem;
+    margin-bottom: 1.4rem;
+}
+.assets__add-content_input{
+    display: flex;
+}
+.assets__add-content_first{
+    margin-right: 1rem;
+}
+.assets__add-content_first span p,
+.assets__add-content_second span p{
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+.assets__add-content_input span{
+    /* width: 400px; */
+    display: flex;
+    align-items: center;
+}

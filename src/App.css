@@ -3,3 +3,23 @@
   margin: 0;
   box-sizing: border-box;
 }
+.logo{
+  display: flex;
+  justify-content: center;
+}
+.logo img{
+  width: 100px;
+  padding: 10px 0;
+}
+.assets__sidebar{
+  height: 100vh;
+}
+.ant-menu-item{
+  margin-block: 10px !important;
+}
+.anticon-menu-fold{
+    margin-left: 10px;
+}
+.anticon-menu-unfold{
+  margin-left: 10px;
+}
