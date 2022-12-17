@@ -1,19 +1,17 @@
 import React , {useState} from 'react'
 import "./Layout.css";
-import AssetList from '../ViewAssets/ViewAssets'
-import Assets from '../AddAssets/addAssets'
-import Setting from '../Setting/Setting'
-
+import { Outlet} from "react-router-dom";
 import {
   MenuFoldOutlined,
   MenuUnfoldOutlined,
   SettingOutlined,
   PlusOutlined,
   UnorderedListOutlined,
+  LogoutOutlined
 } from '@ant-design/icons';
 import AM from '../../Assets/AM.svg'
 import { Layout, Menu, theme } from 'antd';
-import {Route, Routes, useNavigate } from 'react-router-dom'
+import {useNavigate } from 'react-router-dom'
 
 const { Header, Sider, Content } = Layout;
 
@@ -25,6 +23,11 @@ function Layout_Style() {
     token: { colorBgContainer },
   } = theme.useToken();
 
+  const logout =()=>{
+    localStorage.removeItem('token')
+    navigate('/')
+  }
+
   return (
     <div className="App">
     <Layout>
@@ -35,20 +38,19 @@ function Layout_Style() {
         <Menu
           theme="dark"
           mode="inline"
-          // defaultSelectedKeys={['/']}
           items={[
             {
-              key: '/',
+              key: '/main',
               icon: <PlusOutlined/>,
               label: 'Add Assets',
             },
             {
-              key: '/assets',
+              key: '/main/assets',
               icon: <UnorderedListOutlined />,
               label: 'View List',
             },
             {
-              key: '/setting',
+              key: '/main/setting',
               icon: <SettingOutlined />,
               label: 'Settings',
             },
@@ -66,11 +68,12 @@ function Layout_Style() {
             background: colorBgContainer,
           }}
         >
+          
           {React.createElement(collapsed ? MenuUnfoldOutlined : MenuFoldOutlined, {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
           })}
-          
+          <button onClick={logout}> <LogoutOutlined/> Logout </button>
         </Header>
         <Content
           style={{
@@ -80,11 +83,7 @@ function Layout_Style() {
             background: colorBgContainer,
           }}
         >
-          <Routes>
-                <Route path='/' element={<Assets/>}/>
-                <Route exact path='assets' element={<AssetList/>}/>
-                <Route exact path='setting' element={<Setting/>}/>
-          </Routes>
+          <Outlet/>
         </Content>
       </Layout>
     </Layout>

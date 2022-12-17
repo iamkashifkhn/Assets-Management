@@ -18,7 +18,7 @@ function ViewAssets() {
   },[])
   return (
     <div>
-  
+        Hello
     </div>
   )
 }

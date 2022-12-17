@@ -11,7 +11,7 @@
     flex-direction: column;
     align-items: center;
     background-color: aliceblue;
-    padding: 10px 50px;
+    padding: 30px 50px;
     border-radius: 5px;
 }
 .assets__login-content img{
@@ -29,6 +29,9 @@
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 200px;
+}
+.assets__login-content input:focus{
+    border: 1px solid #fff;
 }
 .assets__login-content button{
     padding: 8px 15px;

@@ -22,6 +22,10 @@
     /* font-family: var(--font-family); */
     font-weight: 600;
 }
+.assets__add-content-select{
+    display: flex;
+    justify-content: space-between;
+}
 .assets__add-content_input form span input[type='text']{
     width: 200px;
     padding: 5px;
