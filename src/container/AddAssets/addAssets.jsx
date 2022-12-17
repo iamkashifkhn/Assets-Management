@@ -71,6 +71,7 @@ function AddAssets() {
                 }}
                 onChange={handleChange}
                 defaultValue="Select Type"
+                name={value}
                 options={[
                   {
                     value: "Mouse",
@@ -117,7 +118,7 @@ function AddAssets() {
             </span>
           </div>
           {laptop ? (
-            <div>
+            <div className="assets__laptop">
               <span>
                 <p> RAM </p>
                 <input

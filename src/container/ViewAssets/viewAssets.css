@@ -1,0 +1,22 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+
+  }
+  th{
+    background-color: var(--bg-color);
+    color: #fff;
+  }
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+    cursor: pointer;
+    font-family:var(--font-family);
+
+  }
+  tr:hover{
+    background-color: beige;
+  }
+  
