@@ -70,6 +70,7 @@ function Layout_Style() {
             className: 'trigger',
             onClick: () => setCollapsed(!collapsed),
           })}
+          
         </Header>
         <Content
           style={{
