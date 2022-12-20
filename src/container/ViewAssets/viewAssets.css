@@ -19,4 +19,22 @@ table {
   tr:hover{
     background-color: beige;
   }
-  
+  .assets__add-new{
+    padding: 10px 15px;
+    /* width: 100px; */
+    margin-right: 2rem;
+    border: none;
+    background-color: var(--bg-color);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+
+  }
+  .assets__add-new .anticon-plus-circle{
+    margin-right: 5px;
+  }
+ .assets__add-new a{
+  color: #fff;
+  font-family: var(--font-family);
+ }

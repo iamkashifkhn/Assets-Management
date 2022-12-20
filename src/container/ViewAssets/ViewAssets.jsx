@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./viewAssets.css";
+import {PlusCircleOutlined } from '@ant-design/icons'
 import { getDatabase, ref, child, get } from "firebase/database";
+import { Link } from "react-router-dom";
 
 function ViewAssets() {
   const [data, setData] = useState([]);
@@ -22,6 +24,12 @@ function ViewAssets() {
 
   return (
     <div>
+      <button className="assets__add-new">
+        <Link to='/main'>
+          <PlusCircleOutlined/>
+        Add Assets 
+        </Link>
+      </button>
       <table>
         <thead>
         <tr>
