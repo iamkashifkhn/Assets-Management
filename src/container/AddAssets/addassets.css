@@ -54,3 +54,14 @@
     justify-content: space-between;
     margin-top: 1rem;
 }
+.employee{
+    margin-top: 1rem;
+}
+.employee a p{
+    margin-bottom: 0.5rem;
+    background-color: var(--bg-color);
+    width: 100px;
+    color: #fff;
+    padding: 5px 10px;
+    text-align: center;
+}

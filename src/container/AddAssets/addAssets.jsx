@@ -41,7 +41,7 @@ function AddAssets() {
                     <Link
                     to={`/main/assets`}
                     >
-                      <button className="view-details"> {data[item].employee} </button>
+                      <p className="view-details"> {data[item].employee} </p>
                       </Link>
                   </div>
                 )
