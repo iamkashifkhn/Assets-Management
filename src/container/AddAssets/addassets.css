@@ -1,8 +1,5 @@
 .assets__add-heading{
     display: flex;
-    /* justify-content: center; */
-    /* background-color: var(--bg-color); */
-    /* align-items: center; */
 }
 .assets__add-heading h4{
     padding: 10px 0;
