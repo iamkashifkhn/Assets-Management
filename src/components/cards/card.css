@@ -1,0 +1,24 @@
+.assets__cards {
+  display: flex;
+  flex-direction: column;
+  background-color: #1c315e;
+  padding: 20px 80px;
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 10px 10px 12px -3px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 10px 12px -3px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 12px -3px rgba(0,0,0,0.75);
+  border-radius: 5px;
+}
+.assets__cards:nth-child(2) {
+  background-color: #227c70;
+}
+.assets__cards:nth-child(3) {
+  background-color: #88a47c;
+}
+.assets__cards h1 {
+  font-size: 44px;
+}

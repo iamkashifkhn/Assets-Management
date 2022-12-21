@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./addassets.css";
 import { Select } from "antd";
+import Card from '../../components/cards/Card'
 
 function AddAssets() {
   const [laptop, setLaptop] = useState(false);
@@ -8,6 +9,9 @@ function AddAssets() {
     itemtype: "",
     model: "",
     employee: "",
+    ram: '',
+    hard: '',
+    imei:''
   });
 
   const handleChange = (value) => {
@@ -27,12 +31,13 @@ function AddAssets() {
     value = e.target.value;
 
     setItem({ ...item, [name]: value });
+    console.log("item is", item)
   };
 
   const postData = async (e) => {
     e.preventDefault();
 
-    const { itemtype, model, employee } = item;
+    const { itemtype, model, employee} = item;
     if (itemtype && model && employee) {
       const res = await fetch(
         "https://assets-management-6cdf7-default-rtdb.firebaseio.com/assets.json",
@@ -41,11 +46,11 @@ function AddAssets() {
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ itemtype, model, employee }),
+          body: JSON.stringify(item),
         }
       );
       if (res) {
-        setItem({ itemtype: "", model: "", employee: "" });
+        setItem({ itemtype: "", model: "", employee: "", ram:'', hard:'', imei:'' });
       }
     } else {
       alert("Please fill the data first");
@@ -54,7 +59,12 @@ function AddAssets() {
   return (
     <div className="assets__add">
       <div className="assets__add-heading">
-        <h4> Add Assets Information </h4>
+        <h4> Dashboard</h4>
+      </div>
+      <div className="assets__card">
+      <Card title="Employees" numOfEmployees="10" />
+      <Card title="Assets Free" numOfEmployees="3" />
+      <Card title="Assets Deployed" numOfEmployees="14" />
       </div>
       <div className="assets__add-content">
         <h4 className="assets__add-content_heading">Assets Information</h4>
@@ -125,7 +135,7 @@ function AddAssets() {
                   type="text"
                   placeholder="Ram"
                   name="RAM"
-                  value={item.model}
+                  value={item.ram}
                   onChange={getData}
                   required
                 />
@@ -136,7 +146,7 @@ function AddAssets() {
                   type="text"
                   placeholder="Hard Disk"
                   name="Hard"
-                  value={item.model}
+                  value={item.hard}
                   onChange={getData}
                   required
                 />
@@ -148,7 +158,7 @@ function AddAssets() {
                   type="text"
                   placeholder="Laptop IMEI"
                   name="IMEI"
-                  value={item.model}
+                  value={item.imei}
                   onChange={getData}
                   required
                 />

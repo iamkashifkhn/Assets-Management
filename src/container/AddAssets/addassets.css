@@ -1,12 +1,14 @@
 .assets__add-heading{
     display: flex;
-    justify-content: center;
-    background-color: var(--bg-color);
-    align-items: center;
+    /* justify-content: center; */
+    /* background-color: var(--bg-color); */
+    /* align-items: center; */
 }
 .assets__add-heading h4{
     padding: 10px 0;
-    color: #fff;
+    color: #000;
+    text-align: left;
+    font-size: 22px;
 }
 .assets__add-content {
     margin-top: 1.5rem;
@@ -49,4 +51,9 @@
     display: flex;
     justify-content: space-between;
     margin-top: 0.5rem;
+}
+.assets__card{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
 }
