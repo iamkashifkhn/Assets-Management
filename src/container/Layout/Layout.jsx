@@ -42,7 +42,7 @@ function Layout_Style() {
             {
               key: '/main',
               icon: <PlusOutlined/>,
-              label: 'Add Assets',
+              label: 'Dashboard',
             },
             {
               key: '/main/assets',
