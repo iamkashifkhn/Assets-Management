@@ -18,6 +18,7 @@ function App() {
           <Route exact path='' element={<Assets/>}/>
           <Route exact path="assets" element={<AssetList />} />
           <Route exact path="setting" element={<Setting />} />
+          <Route exact path='assets/:id' element={<AssetList/>}/>
         </Route>
       </Routes>
     </div>
