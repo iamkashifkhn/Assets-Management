@@ -65,7 +65,7 @@ function Add() {
     setIsModalOpen(false);
   };
   return (
-    <div className='assets__add'>
+    <div className='assets__add-card'>
       <Button type="primary" onClick={showModal}>
         Add Assets
       </Button>

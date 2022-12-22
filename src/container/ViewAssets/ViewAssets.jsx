@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import "./viewAssets.css";
 import axios from 'axios';
 import { useParams } from "react-router-dom";
-import { List } from 'antd';
 
 function ViewAssets() {
   const [data, setData ]= useState([])
