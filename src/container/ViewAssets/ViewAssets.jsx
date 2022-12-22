@@ -27,7 +27,7 @@ function ViewAssets() {
       <div className="assets__view-content">
       <h4>{data.employee}</h4>
       <hr/>
-        <ul>
+        <ul className="assets__view-content-list">
            <li><span>Type:</span>{data.itemtype}</li>
            <li><span>Model:</span>{data.model}</li>
            {

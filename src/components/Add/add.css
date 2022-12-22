@@ -1,0 +1,15 @@
+.assets__add{
+    margin-top: 1rem;
+}
+.assets__add button{
+    background-color: #1c315e;
+}
+.assets__add button:hover{
+    background-color: #294174 !important;
+}
+.ant-btn-primary{
+    background-color: #1c315e;
+}
+.ant-btn-primary:hover{
+    background-color: #294174 !important;
+}

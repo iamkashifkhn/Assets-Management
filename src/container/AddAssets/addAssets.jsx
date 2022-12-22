@@ -4,6 +4,7 @@ import Card from '../../components/cards/Card'
 import { getDatabase, ref, child, get } from "firebase/database";
 import {Link} from 'react-router-dom'
 import {UserOutlined} from '@ant-design/icons'
+import Add from '../../components/Add/Add'
 
 function AddAssets() {
   const [data, setData] = useState([]);
@@ -22,7 +23,7 @@ function AddAssets() {
       .catch((error) => {
         console.error(error);
       });
-  }, []);
+  }, [data]);
 
   return (
     <div className="assets__add">
@@ -34,6 +35,7 @@ function AddAssets() {
       <Card title="Assets Free" numOfEmployees="3" icon={<UserOutlined/>}/>
       <Card title="Assets Deployed" numOfEmployees="14" icon={<UserOutlined/>}/>
       </div>
+      <Add/>
       <div className="assets__dashbaord-content">
             {
               Object.keys(data).map((item,idx)=>{
