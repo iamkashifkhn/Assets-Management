@@ -22,3 +22,6 @@
 .assets__cards h1 {
   font-size: 44px;
 }
+.assets__cards span svg{
+  width: 100px;
+}

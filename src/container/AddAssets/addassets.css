@@ -33,17 +33,6 @@
     height: 30px;
     padding-left: 10px;
 }
-.assets__add button {
-    padding: 5px 10px;
-    margin-top: 1rem;
-    border: none;
-    background-color: var(--bg-color);
-    color: #fff;
-    width: 80px;
-    border-radius: 5px;
-    height: 30px;
-    cursor: pointer;
-}
 .assets__laptop{
     display: flex;
     justify-content: space-between;
@@ -56,12 +45,16 @@
 }
 .employee{
     margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
-.employee a p{
-    margin-bottom: 0.5rem;
+.assets__view{
+    padding: 8px 15px;
+    border: none;
     background-color: var(--bg-color);
-    width: 100px;
     color: #fff;
-    padding: 5px 10px;
-    text-align: center;
+    border-radius: 5px;
+    /* height: 30px; */
+    cursor: pointer;
 }
