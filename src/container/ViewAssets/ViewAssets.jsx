@@ -9,11 +9,12 @@ function ViewAssets() {
   const [loading, setLoading] = useState(true);
   const {id} = useParams()
   const apiURL = 'https://assets-management-6cdf7-default-rtdb.firebaseio.com/assets.json'
+  
 
   const requestAPI = async()=>{
     try{
       const res = await axios.get(apiURL)
-      console.log(res.data[id])
+      console.log("Hello", res.data[id])
       setLoading(!loading)
       setData(res.data[id])
     }
