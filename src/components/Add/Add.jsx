@@ -69,7 +69,7 @@ function Add() {
       <Button type="primary" onClick={showModal}>
         Add Assets
       </Button>
-      <Modal title="Basic Modal" open={isModalOpen} onOk={postData} onCancel={handleCancel} width={800}>
+      <Modal title="Add Assets" open={isModalOpen} onOk={postData} onCancel={handleCancel} width={800}>
       <div className="assets__add-content_input">
         <form method="POST">
           <div className="assets__add-content-select">
