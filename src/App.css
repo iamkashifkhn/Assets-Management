@@ -5,6 +5,9 @@
   text-decoration: none;
   list-style: none;
 }
+html {
+  color-scheme: dark light;
+}
 .logo{
   display: flex;
   justify-content: center;
